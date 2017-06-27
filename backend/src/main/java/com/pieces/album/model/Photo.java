@@ -1,19 +1,42 @@
 package com.pieces.album.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import org.hibernate.annotations.CreationTimestamp;
+
+import javax.persistence.*;
+import java.util.Date;
+import java.util.List;
+
 /**
  * Created by Hong on 24.06.2017.
  */
+
+@Entity
 public class Photo {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int photoId;
 
-    private String imageName;
+    private String photoName;
 
     private String title;
 
     private String description;
 
+    private String imageName;
+
+    @CreationTimestamp
+    private Date created;
+
+    @ManyToOne
+    @JsonBackReference
+    private User user;
+
     private int likes;
+
+    @OneToMany(mappedBy = "photo", fetch = FetchType.EAGER)
+    private List<Comment> commentList;
 
 
     public int getPhotoId() {
@@ -54,5 +77,37 @@ public class Photo {
 
     public void setLikes(int likes) {
         this.likes = likes;
+    }
+
+    public String getPhotoName() {
+        return photoName;
+    }
+
+    public void setPhotoName(String photoName) {
+        this.photoName = photoName;
+    }
+
+    public Date getCreated() {
+        return created;
+    }
+
+    public void setCreated(Date created) {
+        this.created = created;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public List<Comment> getCommentList() {
+        return commentList;
+    }
+
+    public void setCommentList(List<Comment> commentList) {
+        this.commentList = commentList;
     }
 }
