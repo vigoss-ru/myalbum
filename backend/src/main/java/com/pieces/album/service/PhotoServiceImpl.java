@@ -19,7 +19,7 @@ public class PhotoServiceImpl implements PhotoService {
 
     public List<Photo> setPhotos() {
         Photo photo1 = new Photo();
-        photo1.setPhotoId(1);
+        photo1.setPhotoId(Long.valueOf(1));
         photo1.setImageName("https://static.pexels.com/photos/235459/pexels-photo-235459.jpeg");
         photo1.setTitle("Image 1 Title");
         photo1.setDescription("Image 1 Description");
@@ -27,7 +27,7 @@ public class PhotoServiceImpl implements PhotoService {
 
         // Image 2
         Photo photo2 = new Photo();
-        photo2.setPhotoId(2);
+        photo2.setPhotoId(Long.valueOf(2));
         photo2.setImageName("https://static.pexels.com/photos/270188/pexels-photo-270188.jpeg");
         photo2.setTitle("Image 2 Title");
         photo2.setDescription("Image 2 Description");
@@ -35,7 +35,7 @@ public class PhotoServiceImpl implements PhotoService {
 
         // Image 2
         Photo photo3 = new Photo();
-        photo3.setPhotoId(3);
+        photo3.setPhotoId(Long.valueOf(3));
         photo3.setImageName("https://static.pexels.com/photos/325963/pexels-photo-325963.jpeg");
         photo3.setTitle("Image 3 Title");
         photo3.setDescription("Image 3 Description");

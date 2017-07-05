@@ -1,3 +1,38 @@
 .segment img {
   width: 100%;
 }
+
+.nav-bar {
+  /*border: 1px solid red;*/
+}
+
+.container {
+  margin: auto;
+  margin-top: 80px;
+  width: 80%;
+  /*border: 1px solid red;*/
+}
+
+.box {
+  border: 1px solid red;
+}
+
+.image-background {
+  background-color: #212124;
+  width:auto;
+  height: 500px;
+}
+
+a .logo {
+  width: 200px;
+}
+
+
+.ui.secondary.pointing.menu > a.item:hover {
+  color: #fff;
+}
+
+
+.navigation .right.menu {
+  line-height: 127px;
+}
