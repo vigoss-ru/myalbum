@@ -11,10 +11,15 @@ import { SidePanelComponent } from './components/side-panel.component';
 import { NavBarComponent } from './components/nav-bar.component';
 import { RegisterComponent } from './components/register.component';
 import { LoginComponent } from './components/login.component';
+import { MyAlbumComponent } from './components/my-album.component';
+import { AddPhotoComponent } from './components/add-photo.component';
 
 import { PhotoService } from './services/photo.service';
 import { RegisterService } from './services/register.service';
 import { LoginService } from './services/login.service';
+import { UserService } from './services/user.service';
+import { AddPhotoService } from './services/add-photo.service';
+import { UploadPhotoService } from './services/upload-photo.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +29,9 @@ import { LoginService } from './services/login.service';
     SidePanelComponent,
     NavBarComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    MyAlbumComponent,
+    AddPhotoComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +42,10 @@ import { LoginService } from './services/login.service';
   providers: [
     PhotoService,
     RegisterService,
-    LoginService
+    LoginService,
+    UserService,
+    AddPhotoService,
+    UploadPhotoService
   ],
   bootstrap: [AppComponent]
 })
