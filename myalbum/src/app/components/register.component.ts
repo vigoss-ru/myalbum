@@ -8,7 +8,7 @@ import { RegisterService } from '../services/register.service';
 })
 export class RegisterComponent {
   newUser: User = new User();
-  registered: boolean = false;
+  registered = false;
 
   constructor(private registerService: RegisterService) {}
 

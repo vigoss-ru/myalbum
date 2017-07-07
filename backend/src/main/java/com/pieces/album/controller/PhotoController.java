@@ -12,7 +12,6 @@ import java.util.List;
 /**
  * Created by Hong on 24.06.2017.
  */
-@CrossOrigin
 @RestController
 @RequestMapping("/photo")
 public class PhotoController {
